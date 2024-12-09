@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="chap_margin">20sp</dimen>
+</resources>
