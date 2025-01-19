@@ -1,5 +1,6 @@
 package com.qordoq.app
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -23,16 +24,16 @@ class LesonFragment : Fragment() {
 
         tabLayout = view.findViewById(R.id.tabLayout)
         viewPager = view.findViewById(R.id.viewPager)
-
         // Fragmentlarni sozlash
         adapter = LessonPagerAdapter(this)
         viewPager.adapter = adapter
-
-        // TabLayout va ViewPager2 ni bog'lasqah
+        // TabLayout va ViewPager2 ni bog'lash
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = if (position == 0) "Nazariya" else "Amaliyot"
         }.attach()
 
         return view
     }
+
+
 }

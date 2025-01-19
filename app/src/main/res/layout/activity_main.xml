@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/RelativeLayout"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
 
     <!-- Fragmentni ko'rsatish uchun bo'sh joy -->
     <FrameLayout
@@ -15,7 +17,17 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="106dp"
+        android:layout_alignBottom="@id/container"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="#00CCFF"
+        android:clipToPadding="true"
+        android:contextClickable="true"
+        android:persistentDrawingCache="animation"
+        android:textAlignment="center"
+        app:itemIconSize="40dp"
+        app:itemPaddingTop="16dp"
+        app:itemRippleColor="#00FFFFFF"
         app:menu="@menu/botnavm" />
 </RelativeLayout>

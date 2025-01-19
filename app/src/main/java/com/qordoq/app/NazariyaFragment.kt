@@ -12,7 +12,7 @@ class NazariyaFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_nazariya, container, false)
-        // Firestore-dan ma'lumotlarni olish va UI ni yangilash
+        
         return view
     }
 }

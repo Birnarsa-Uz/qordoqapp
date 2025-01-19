@@ -16,7 +16,6 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
             val view = inflater.inflate(R.layout.fragment_profile, container, false)
-            val fordynamic = view.findViewById<LinearLayout>(R.id.inearl)
             val sharedPref = activity?.getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
             val uid = sharedPref?.getString("uid", "").toString()
             getProfileData(uid){ task ->
@@ -24,7 +23,6 @@ class ProfileFragment : Fragment() {
                     val tview = TextView(view.context)
                     tview.text = value.toString()
                     tview.textSize = 28F
-                    fordynamic.addView(tview)
                 } // for loop
             } // getProfileData block
             return view

@@ -5,14 +5,68 @@
     android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment" >
+    android:background="#FFFFFF"
+    tools:context=".ProfileFragment">
 
     <LinearLayout
-        android:id="@+id/inearl"
-        android:layout_width="581dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_width="804dp"
+        android:layout_height="203dp"
+        android:clipToPadding="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:background="#0481E1"
+            android:scaleType="fitXY"
+            android:src="@drawable/profileicon" />
+
+        <LinearLayout
+            android:layout_width="327dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:text="Ism"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/fami"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50sp"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:paddingTop="0sp"
+                android:text="Familiya"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/class_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:includeFontPadding="false"
+        android:text="1-A sinf"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="267dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
