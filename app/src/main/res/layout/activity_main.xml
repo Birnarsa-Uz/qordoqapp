@@ -7,13 +7,11 @@
     tools:context=".MainActivity"
     >
 
-    <!-- Fragmentni ko'rsatish uchun bo'sh joy -->
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <!-- BottomNavigationView qo'shish -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnv"
         android:layout_width="match_parent"
@@ -26,8 +24,11 @@
         android:contextClickable="true"
         android:persistentDrawingCache="animation"
         android:textAlignment="center"
-        app:itemIconSize="40dp"
-        app:itemPaddingTop="16dp"
+        app:itemIconSize="50dp"
+        app:itemPaddingBottom="20dp"
+        app:itemPaddingTop="20dp"
         app:itemRippleColor="#00FFFFFF"
+        app:itemTextAppearanceActive="@style/TextAppearance.Material3.LabelMedium"
+        app:itemTextColor="#000000"
         app:menu="@menu/botnavm" />
 </RelativeLayout>
