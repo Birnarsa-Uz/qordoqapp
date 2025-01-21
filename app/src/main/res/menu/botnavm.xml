@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Dars" android:id="@+id/leson" android:icon="@drawable/leson" />
-    <item android:title="Home" android:id="@+id/home" android:icon="@drawable/baseline_add_home_24"/>
-    <item android:title="Profil" android:id="@+id/profile" android:icon="@drawable/profileicon"/>
+    <item
+        android:id="@+id/leson"
+        android:icon="@drawable/leson"
+        android:title="Dars" />
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_add_home_24"
+        android:title="Home"
+        android:titleCondensed="@string/app_name" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profileicon"
+        android:title="Profil"
+        android:titleCondensed="@string/app_name" />
 </menu>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,70 +9,12 @@
     android:background="#02BEED"
     tools:context=".LoginActivity">
 
-    <EditText
-        android:id="@+id/uid"
-        android:layout_width="711dp"
-        android:layout_height="158dp"
-        android:layout_marginTop="272dp"
-        android:background="@drawable/borderinput"
-        android:ems="10"
-        android:fontFamily="@font/poppins_semibold"
-        android:gravity="center_vertical"
-        android:hint="ID raqam"
-        android:includeFontPadding="false"
-        android:inputType="text"
-        android:paddingStart="45sp"
-        android:textColor="#000000"
-        android:textColorHint="#058CAE"
-        android:textSize="50sp"
-        android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="710dp"
-        android:layout_height="163dp"
-        android:layout_marginTop="44dp"
-        android:background="@drawable/borderinput"
-        android:ems="10"
-        android:fontFamily="@font/poppins_semibold"
-        android:gravity="center_vertical"
-        android:hint="Parol"
-        android:includeFontPadding="false"
-        android:inputType="textPassword"
-        android:paddingStart="45dp"
-        android:textColorHint="#058CAE"
-        android:textSize="50sp"
-        android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/uid" />
-
-    <Button
-        android:id="@+id/login"
-        android:layout_width="515dp"
-        android:layout_height="161dp"
-        android:layout_marginTop="108dp"
-        android:background="@drawable/borderinput"
-        android:fontFamily="@font/poppins_medium"
-        android:includeFontPadding="false"
-        android:text="Kirish"
-        android:textColor="#000000"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
-
+    <!-- Title -->
     <TextView
         android:id="@+id/textView"
-        android:layout_width="261dp"
-        android:layout_height="135dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
         android:fontFamily="@font/hedvig_letters_sans"
         android:shadowColor="#D8FF00"
         android:shadowDx="1.0"
@@ -79,9 +22,100 @@
         android:shadowRadius="13.0"
         android:text="@string/login"
         android:textColor="#FFD24B"
-        android:textSize="95sp"
+        android:textSize="85sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- User ID Input -->
+    <LinearLayout
+        android:id="@+id/uidContainer"
+        android:layout_width="425dp"
+        android:layout_height="115dp"
+        android:orientation="horizontal"
+        android:background="@drawable/borderinput"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        android:layout_marginTop="64dp">
+
+        <ImageView
+            android:id="@+id/uidIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_user"
+            app:tint="#058CAE" />
+
+        <EditText
+            android:id="@+id/uid"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/poppins_semibold"
+            android:hint="ID raqam"
+            android:includeFontPadding="false"
+            android:inputType="text"
+            android:paddingStart="15dp"
+            android:textColor="#000000"
+            android:textColorHint="#058CAE"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <!-- Password Input -->
+    <LinearLayout
+        android:id="@+id/passwordContainer"
+        android:layout_width="425dp"
+        android:layout_height="115dp"
+        android:orientation="horizontal"
+        android:background="@drawable/borderinput"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/uidContainer"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/passwordIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_lock"
+            app:tint="#058CAE" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/poppins_semibold"
+            android:hint="Parol"
+            android:inputType="textPassword"
+            android:paddingStart="15dp"
+            android:textColor="#000000"
+            android:textColorHint="#058CAE"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <!-- Login Button -->
+    <TextView
+        android:id="@+id/loginButton"
+        android:layout_width="425dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/btnborder"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="Kirish"
+        android:textColor="#FFFFFF"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordContainer" />
 </androidx.constraintlayout.widget.ConstraintLayout>
