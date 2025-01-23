@@ -26,7 +26,7 @@ class ProfileFragment : Fragment() {
                 fami.text = task["lastname"].toString()
                 view.findViewById<TextView>(R.id.class_name).text = task["class_name"].toString()
             } // getProfileData block
-            view.findViewById<TextView>(R.id.learned_lessons).setOnClickListener{
+            view.findViewById<TextView>(R.id.out).setOnClickListener{
                 val sharedPref = activity?.getSharedPreferences("UserPrefs", Context.MODE_PRIVATE) as SharedPreferences
                 sharedPref.edit().putString("uid", "").putBoolean("isLogged", false).apply()
                 startActivity(Intent(activity, LoginActivity::class.java))

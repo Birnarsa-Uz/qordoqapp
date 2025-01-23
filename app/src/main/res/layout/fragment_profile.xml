@@ -45,18 +45,18 @@
                     android:fontFamily="@font/poppins_medium"
                     android:includeFontPadding="false"
                     android:textColor="#FFFBFB"
-                    android:textSize="40sp" />
+                    android:textSize="25sp" />
 
                 <TextView
                     android:id="@+id/fami"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12sp"
+                    android:layout_marginStart="8sp"
                     android:fontFamily="@font/poppins_medium"
                     android:includeFontPadding="false"
                     android:paddingTop="0sp"
                     android:textColor="#FFFBFB"
-                    android:textSize="40sp" />
+                    android:textSize="25sp" />
 
             </LinearLayout>
 
