@@ -45,7 +45,7 @@
                     android:fontFamily="@font/poppins_medium"
                     android:includeFontPadding="false"
                     android:textColor="#FFFBFB"
-                    android:textSize="25sp" />
+                    android:textSize="22sp" />
 
                 <TextView
                     android:id="@+id/fami"
@@ -56,7 +56,7 @@
                     android:includeFontPadding="false"
                     android:paddingTop="0sp"
                     android:textColor="#FFFBFB"
-                    android:textSize="25sp" />
+                    android:textSize="22sp" />
 
             </LinearLayout>
 
