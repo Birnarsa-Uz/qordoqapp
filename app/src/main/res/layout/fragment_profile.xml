@@ -11,88 +11,99 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"></LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="#0481E1"
-        android:clipToPadding="false"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="173dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0"
-            android:background="#0481E1"
-            android:scaleType="fitXY"
-            android:src="@drawable/profileicon" />
+        android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/fio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#0481E1"
+            android:clipToPadding="false"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_medium"
-                android:includeFontPadding="false"
-                android:textColor="#FFFBFB"
-                android:textSize="40sp" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="156dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:background="#0481E1"
+                android:scaleType="fitXY"
+                android:src="@drawable/profileicon" />
 
-            <TextView
-                android:id="@+id/fami"
+            <LinearLayout
+                android:id="@+id/fio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12sp"
-                android:fontFamily="@font/poppins_medium"
-                android:includeFontPadding="false"
-                android:paddingTop="0sp"
-                android:textColor="#FFFBFB"
-                android:textSize="40sp" />
+                android:layout_marginStart="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
+                    android:textColor="#FFFBFB"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/fami"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
+                    android:paddingTop="0sp"
+                    android:textColor="#FFFBFB"
+                    android:textSize="40sp" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/class_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/poppins_medium"
+            android:includeFontPadding="false"
+            android:text="Sinfingiz"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textColorHighlight="#F64848"
+            android:textColorHint="#FF1E1E"
+            android:textColorLink="#FF1F1F"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/learned_lessons"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:gravity="center_vertical"
+            android:text="O'tilgan Darslar"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/homeworks"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:gravity="center_vertical"
+            android:text="Uyga Vazifalar"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="35dp"
+            android:text="@string/chiqish"
+            android:textIsSelectable="true"
+            android:textSize="55sp"
+            android:textStyle="bold|italic" />
+
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/class_name"
-        android:layout_width="197dp"
-        android:layout_height="66dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="56dp"
-        android:fontFamily="@font/poppins_medium"
-        android:includeFontPadding="false"
-        android:text="Sinfingiz"
-        android:textAllCaps="false"
-        android:textColor="#000000"
-        android:textColorHighlight="#F64848"
-        android:textColorHint="#FF1E1E"
-        android:textColorLink="#FF1F1F"
-        android:textSize="48sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <TextView
-        android:id="@+id/out"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="68dp"
-        android:text="@string/chiqish"
-        android:textIsSelectable="true"
-        android:textSize="55sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/class_name" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,15 +23,6 @@ fun loginUser(uid: String, password: String, onResult: (HashMap<*, *>) -> Unit) 
 }
 
 
-fun getLesonTime(classid: String, day: Int, onResult: (Boolean) -> Unit) {
-    var lesonStartingTime: String = ""
-    db.collection(classid).document("leson_list").get().addOnSuccessListener {
-        val lesons = it.get("day_${day}") as Array<*>
-        val currentLeson = lesons[day] as HashMap<*, *>
-        lesonStartingTime = currentLeson["starting"].toString()
-        isLesonStarted(lesonStartingTime)
-    }
-}
 fun loadFragment(fragment: Fragment, supportFragmentManager: androidx.fragment.app.FragmentManager): Boolean {
     supportFragmentManager.beginTransaction()
         .replace(R.id.container, fragment)

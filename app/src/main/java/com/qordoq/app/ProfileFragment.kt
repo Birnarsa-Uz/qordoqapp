@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.TextView
 
 class ProfileFragment : Fragment() {
@@ -27,12 +26,15 @@ class ProfileFragment : Fragment() {
                 fami.text = task["lastname"].toString()
                 view.findViewById<TextView>(R.id.class_name).text = task["class_name"].toString()
             } // getProfileData block
-            view.findViewById<TextView>(R.id.out).setOnClickListener{
+            view.findViewById<TextView>(R.id.learned_lessons).setOnClickListener{
                 val sharedPref = activity?.getSharedPreferences("UserPrefs", Context.MODE_PRIVATE) as SharedPreferences
                 sharedPref.edit().putString("uid", "").putBoolean("isLogged", false).apply()
                 startActivity(Intent(activity, LoginActivity::class.java))
                 activity?.finish()
                 return@setOnClickListener
+            }
+            view.findViewById<TextView>(R.id.learned_lessons).setOnClickListener{
+                startActivity(Intent(requireActivity(), LearnedLesonsListActivity::class.java))
             }
             return view
     } // onCreteView block
